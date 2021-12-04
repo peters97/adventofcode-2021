@@ -16,7 +16,8 @@ class Main extends Day implements IDay
     
     public function run(): void
     {
-        $this->first();;
+        $this->first();
+        $this->second();
     }
     
     public function first(): void
@@ -47,6 +48,39 @@ class Main extends Day implements IDay
             }
         }
         
+        $this->line($x * $y);
+    }
+    
+    public function second(): void
+    {
+        $x = 0;
+        $y = 0;
+        $aim = 0;
+    
+        foreach ($this->input as $step) {
+            if (empty($step)) {
+                continue;
+            }
+        
+            $step = explode(' ', $step);
+        
+            $command = $step[0];
+            $value = (int)$step[1];
+        
+            if ($command === 'forward') {
+                $x += $value;
+                $y += ($value * $aim);
+            }
+        
+            if ($command === 'up') {
+                $aim -= $value;
+            }
+        
+            if ($command === 'down') {
+                $aim += $value;
+            }
+        }
+    
         $this->line($x * $y);
     }
 }
