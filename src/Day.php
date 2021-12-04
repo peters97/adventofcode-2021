@@ -25,4 +25,9 @@ class Day
         
         return [];
     }
+    
+    protected function line(mixed $line): void
+    {
+        echo $line . PHP_EOL;
+    }
 }
