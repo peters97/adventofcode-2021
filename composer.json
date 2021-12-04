@@ -1,0 +1,15 @@
+{
+    "name": "daan/adventofcode-2021",
+    "autoload": {
+        "psr-4": {
+            "Advent\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daan Peters",
+            "email": "daan@lyfter.nl"
+        }
+    ],
+    "require": {}
+}
